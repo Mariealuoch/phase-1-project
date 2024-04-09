@@ -1,0 +1,71 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #FF416C, #FF4B2B);
+  }
+
+  #app {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    color: #333;
+    margin-top: 0;
+  }
+
+  #joke-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  p {
+    color: #444;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  em {
+    color: #888;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  #app.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  #app.dark-mode h1{
+    color: #fff;
+  }
+  #app #joke-container.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
