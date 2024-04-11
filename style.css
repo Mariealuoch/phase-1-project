@@ -6,10 +6,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #FF416C, #FF4B2B);
-  }
+    background-color: #FFD700;
+}
 
-  #app {
+   #app {
     width: 80%;
     max-width: 600px;
     background-color: #fff;
@@ -20,13 +20,13 @@ body {
   }
 
   h1 {
-    color: #333;
+    color: #333333;
     margin-top: 0;
   }
 
   #joke-container {
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 30px;
+    padding: 30px;
     background-color: #f5f5f5;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -45,7 +45,7 @@ body {
   button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #2E8B57;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -55,7 +55,7 @@ body {
   }
 
   button:hover {
-    background-color: #0056b3;
+    background-color: #FF6347;
   }
 
   #app.dark-mode {
@@ -69,3 +69,26 @@ body {
     background-color: #333;
     color: #fff;
   }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px
+  }
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

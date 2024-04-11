@@ -44,3 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initial rendering of joke
   renderJoke();
 });
+ // Using forEach to iterate through setups and punchlines arrays
+ setups.forEach(function(setup, index) {
+  console.log(`Joke ${index + 1} setup: ${setup}`);
+});
+
+punchlines.forEach(function(punchline, index) {
+  console.log(`Joke ${index + 1} punchline: ${punchline}`);
+});
