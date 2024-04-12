@@ -69,26 +69,19 @@ body {
     background-color: #333;
     color: #fff;
   }
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px
-  }
+ 
+/* Style for the like button */
+#like-button {
+  background-color: #3498db; /* Blue color */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Padding around the text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
+/* Style for the like button on hover */
+#like-button:hover {
+  background-color: #c4341b; /* Darker blue color */
 }

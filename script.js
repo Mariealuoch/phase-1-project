@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const jokeContainer = document.getElementById('joke-container');
   const appContainer = document.getElementById('app');
   const toggleModeButton = document.getElementById('toggle-mode');
-
+const likeButton = document.getElementById('like-button')
   // Function to fetch joke from the Official Joke API
   async function fetchJoke() {
     try {
-      const response = await fetch('https://official-joke-api.appspot.com/random_joke');
+      const response = await fetch('https://v2.jokeapi.dev/joke/Any?safe-mode')
       const data = await response.json();
       return data; // Return single joke object
     } catch (error) {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (jokeData) {
       let jokeHtml = '';
       jokeHtml+= `<p>${jokeData.setup}</p>`;
-      jokeHtml += `<p>${jokeData.punchline}</p>`; // Assuming each joke object has a 'punchline' attribute
+      jokeHtml += `<p>${jokeData.delivery}</p>`; // Assuming each joke object has a 'punchline' attribute
       jokeContainer.innerHTML = jokeHtml;
     } else {
       jokeContainer.innerHTML = '<p>Sorry, failed to fetch joke. Please try again later.</p>';
@@ -52,3 +52,17 @@ document.addEventListener('DOMContentLoaded', function () {
 punchlines.forEach(function(punchline, index) {
   console.log(`Joke ${index + 1} punchline: ${punchline}`);
 });
+//button with like-button
+const likeButton = document.getElementById('like-button');
+let likesCount = 0;
+
+// Event listener for the like button
+likeButton.addEventListener('click', function() {
+    likesCount++;
+    updateLikesCount();
+});
+
+// Function to update the likes count display
+function updateLikesCount() {
+    likeButton.textContent = `Like (${likesCount})`;
+}
